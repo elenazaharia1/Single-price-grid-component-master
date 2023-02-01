@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* font-family: 'Karla', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(204, 43%, 93%);
+}
+ul li {
+  list-style: none;
+  line-height: 1.4;
+}
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 45rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "area1 area1"
+    "area2  area3";
+}
+.section-one {
+  grid-area: area1;
+  background-color: white;
+  padding: 3rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.section-two {
+  grid-area: area2;
+  background-color: hsl(179, 62%, 43%);
+  padding: 2rem;
+  border-bottom-left-radius: 15px;
+}
+.section-three {
+  grid-area: area3;
+  background-color: hsla(179, 62%, 43%, 0.76);
+  padding: 2rem;
+  border-bottom-right-radius: 15px;
+}
+h1 {
+  color: hsl(179, 62%, 43%);
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+h2 {
+  color: hsl(71, 73%, 54%);
+  padding-bottom: 1rem;
+}
+.section-one > p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.9;
+}
+.section-one p {
+  min-width: 80%;
+}
+.btn {
+  background-color: hsl(71, 73%, 54%);
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  color: hsl(204, 43%, 93%);
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+.btn:active,
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+h3 {
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+#month {
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 80%;
+}
+@media (max-width: 538px) {
+  .container {
+    height: 100vh;
+    margin: 1rem 2rem;
+    /* padding-top: 4rem; */
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "area1"
+      "area2 "
+      "area3";
+  }
+
+  .section-two {
+    border-bottom-left-radius: 0;
+  }
+  .section-three {
+    border-bottom-left-radius: 15px;
+  }
+  .btn {
+    width: 80%;
+
+    margin: 0 2rem;
+    margin-top: 2rem;
+  }
+}
